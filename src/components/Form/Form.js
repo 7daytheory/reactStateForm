@@ -7,19 +7,20 @@ class AddForm extends Component {
       firstname: '',
       email: '',
       phone: '',
+      message: ''
    };
 
-   onInputChange = e => this.setState({ [e.target.name]:
-      e.target.value});
+   //You *Could* do this for every input and do e.firstname.name : e.firstname.value (or something like that) but it would not be efficient
+   onInputChange = e => this.setState({ [e.target.name]: e.target.value});
    
 
 render() {
    //Define states as variables
-   let { firstname, email, phone } = this.state;
+   const { firstname, email, phone, message } = this.state;
     return (
-      <div className="card mb-3">
+      <div className="card mb-3 center">
          <div className="card-header">
-            Send Message
+            <h2>Contact Us</h2>
          </div>
          <div class="card-body">
             <form>
@@ -28,7 +29,7 @@ render() {
                   <input
                      type="text"
                      className="form-control form-control-lg"
-                     placeholder="Enter Name..."
+                     placeholder="Enter Name"
                      required
                      name="firstname"
                      value={firstname}
@@ -39,7 +40,7 @@ render() {
                   <input
                      type="text"
                      className="form-control form-control-lg"
-                     placeholder="Enter email..."
+                     placeholder="Enter email"
                      required
                      name="email"
                      value={email}
@@ -50,12 +51,23 @@ render() {
                   <input
                      type="text"
                      className="form-control form-control-lg"
-                     placeholder="Enter phone number..."
+                     placeholder="Enter phone number"
                      name="phone"
                      value={phone}
                      onChange={this.onInputChange}
                   >
                   </input>
+
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                     type="text"
+                     className="form-control form-control-lg"
+                     placeholder="Message ..."
+                     name="message"
+                     value={message}
+                     onChange={this.onInputChange}
+                  >
+                  </textarea>
                   </div>
             </form>
          </div>

@@ -6,3 +6,19 @@ form {
     justify-content: center;
     margin: auto;
 }
+
+.center {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin: 15px 0px 5px 0px!important;
+}
+
+textarea {
+    min-width: 250px;
+    max-width: 550px;
+    height: 250px;
+    font-size: 1.1em!important;
+}
