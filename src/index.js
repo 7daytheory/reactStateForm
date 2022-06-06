@@ -4,11 +4,14 @@ import App from './App';
 import AddForm from './components/Form/Form';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { Provider } from './context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
+    <Provider>
     <App />
     <AddForm />
+    </Provider>
   </div>
 );
