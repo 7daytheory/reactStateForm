@@ -68,6 +68,13 @@ render() {
                      onChange={this.onInputChange}
                   >
                   </textarea>
+
+                  <input
+                     type="submit"
+                     class="btn-dark rounded mt-2"
+                     style={{cursor: 'pointer'}}
+
+                  />
                   </div>
             </form>
          </div>
