@@ -7,7 +7,7 @@ class Contact extends Component {
     };
 
     onDeleteClick = () => {
-        console.log("Clicked!");
+        this.props.deleteClickHandler();
     }
 
     render() {
@@ -17,18 +17,18 @@ class Contact extends Component {
 
         return (
             <div className="card card-body mb-3">
-                <h4 style={{color: "#333"}}>{name}{' '} 
+                <h4 style={{color: '#333', float: 'left'}}>{name}{' '} 
                 <i onClick={() => this.setState({showContactInfo: !this.state.showContactInfo})}
                 className='fas fa-sort-down'
                 style={{cursor: 'pointer'}}
                 />
-                </h4>
 
-                {/* <i
+                {<i
                 className='fas fa-times'
                 style={{float: 'right', cursor: 'pointer', color: 'red'}}
                 onClick = {this.onDeleteClick}
-                /> */}
+                />}
+                </h4>
                 
                 {showContactInfo ? (<ul className='list-group'>
                 <li className='list-group-item'>Email : {email}</li>
@@ -40,7 +40,8 @@ class Contact extends Component {
 }
 
 Contact.propTypes = {
-    contact: PropTypes.object.isRequired
+    contact: PropTypes.object.isRequired,
+    deleteClickHandler: PropTypes.func.isRequired
 };
 
 export default Contact;
