@@ -1,8 +1,12 @@
+import { Contacts } from './components/Contacts/Contacts';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div className="App">
-      <h1>React Form</h1><br/>
-      <p>Testing react form with state</p>
+      <div className="container">
+        <Contacts />
+      </div>
     </div>
   );
 }
