@@ -4,7 +4,7 @@ import './Form.css';
 class AddForm extends Component {
    //set state for inputs
     state = {
-      firstname: '',
+      name: '',
       email: '',
       phone: '',
       message: ''
@@ -16,11 +16,11 @@ class AddForm extends Component {
 
 render() {
    //Define states as variables
-   const { firstname, email, phone, message } = this.state;
+   const { name, email, phone, message } = this.state;
     return (
       <div className="card mb-3 center">
          <div className="card-header">
-            <h2>Contact Us</h2>
+            <h2>Add User</h2>
          </div>
          <div class="card-body">
             <form>
@@ -31,8 +31,8 @@ render() {
                      className="form-control form-control-lg"
                      placeholder="Enter Name"
                      required
-                     name="firstname"
-                     value={firstname}
+                     name="name"
+                     value={name}
                      onChange={this.onInputChange}
                   >
                   </input>
@@ -72,7 +72,7 @@ render() {
                   <input
                      type="submit"
                      class="btn-dark rounded mt-2"
-                     style={{cursor: 'pointer'}}
+                     style={{cursor: 'pointer', float: 'right', padding: '2px 15px'}}
 
                   />
                   </div>
