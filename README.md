@@ -1,2 +1,2 @@
-# reactStateForm
-Creating a form with React using states
+# CRUD React Form Practise
+Practising states and CRUD with React, not much more I can really say about this one.
